@@ -9,13 +9,13 @@ var interfaceConfig = {
      * Whether or not the blurred video background for large video should be
      * displayed on browsers that can support it.
      */
-    DISABLE_VIDEO_BACKGROUND: false,
+    DISABLE_VIDEO_BACKGROUND: true,
 
     INITIAL_TOOLBAR_TIMEOUT: 20000,
     TOOLBAR_TIMEOUT: 4000,
     TOOLBAR_ALWAYS_VISIBLE: false,
-    DEFAULT_REMOTE_DISPLAY_NAME: 'Fellow Jitster',
-    DEFAULT_LOCAL_DISPLAY_NAME: 'me',
+    DEFAULT_REMOTE_DISPLAY_NAME: '🧘',
+    DEFAULT_LOCAL_DISPLAY_NAME: '❤️',
     SHOW_JITSI_WATERMARK: true,
     JITSI_WATERMARK_LINK: 'https://jitsi.org',
 
@@ -25,15 +25,15 @@ var interfaceConfig = {
     BRAND_WATERMARK_LINK: '',
     SHOW_POWERED_BY: false,
     SHOW_DEEP_LINKING_IMAGE: false,
-    GENERATE_ROOMNAMES_ON_WELCOME_PAGE: true,
-    DISPLAY_WELCOME_PAGE_CONTENT: true,
+    GENERATE_ROOMNAMES_ON_WELCOME_PAGE: false,
+    DISPLAY_WELCOME_PAGE_CONTENT: false,
     DISPLAY_WELCOME_PAGE_TOOLBAR_ADDITIONAL_CONTENT: false,
     APP_NAME: 'Jitsi Meet',
     NATIVE_APP_NAME: 'Jitsi Meet',
     PROVIDER_NAME: 'Jitsi',
     LANG_DETECTION: true, // Allow i18n to detect the system language
     INVITATION_POWERED_BY: true,
-
+    SET_FILMSTRIP_ENABLED: true,
     /**
      * If we should show authentication block in profile
      */
@@ -47,12 +47,14 @@ var interfaceConfig = {
      * jwt.
      */
     TOOLBAR_BUTTONS: [
-        'microphone', 'camera', 'closedcaptions', 'desktop', 'fullscreen',
-        'fodeviceselection', 'hangup', 'profile', 'info', 'chat', 'recording',
-        'livestreaming', 'etherpad', 'sharedvideo', 'settings', 'raisehand',
-        'videoquality', 'filmstrip', 'invite', 'feedback', 'stats', 'shortcuts',
-        'tileview', 'videobackgroundblur', 'download', 'help', 'mute-everyone',
-        'e2ee'
+        'camera',
+	'microphone',
+        'fullscreen',
+        'livestreaming', 'record', 'recording',
+        'tileview', 'profile', 'chat',
+        'videoquality', 'settings',
+        'shortcuts',
+        'help' 
     ],
 
     SETTINGS_SECTIONS: [ 'devices', 'language', 'moderator', 'profile', 'calendar' ],
@@ -82,8 +84,8 @@ var interfaceConfig = {
 
     // Enables feedback star animation.
     ENABLE_FEEDBACK_ANIMATION: false,
-    DISABLE_FOCUS_INDICATOR: false,
-    DISABLE_DOMINANT_SPEAKER_INDICATOR: false,
+    DISABLE_FOCUS_INDICATOR: true,
+    DISABLE_DOMINANT_SPEAKER_INDICATOR: true,
 
     /**
      * Whether the speech to text transcription subtitles panel is disabled.
@@ -91,7 +93,7 @@ var interfaceConfig = {
      *
      * @type {boolean}
      */
-    DISABLE_TRANSCRIPTION_SUBTITLES: false,
+    DISABLE_TRANSCRIPTION_SUBTITLES: true,
 
     /**
      * Whether the ringing sound in the call/ring overlay is disabled. If
@@ -123,7 +125,7 @@ var interfaceConfig = {
      *
      * @type {number}
      */
-    MAXIMUM_ZOOMING_COEFFICIENT: 1.3,
+    MAXIMUM_ZOOMING_COEFFICIENT: 1,
 
     /*
      * If indicated some of the error dialogs may point to the support URL for
@@ -163,14 +165,14 @@ var interfaceConfig = {
      *
      * @type {boolean}
      */
-    VIDEO_QUALITY_LABEL_DISABLED: false,
+    VIDEO_QUALITY_LABEL_DISABLED: true,
 
     /**
      * If true, will display recent list
      *
      * @type {boolean}
      */
-    RECENT_LIST_ENABLED: true,
+    RECENT_LIST_ENABLED: false,
 
     // Names of browsers which should show a warning stating the current browser
     // has a suboptimal experience. Browsers which are not listed as optimal or
@@ -200,7 +202,7 @@ var interfaceConfig = {
     /**
      * If true, notifications regarding joining/leaving are no longer displayed.
      */
-    DISABLE_JOIN_LEAVE_NOTIFICATIONS: false,
+    DISABLE_JOIN_LEAVE_NOTIFICATIONS: true,
 
     /**
     * Decides whether the chrome extension banner should be rendered on the landing page and during the meeting.
@@ -212,7 +214,7 @@ var interfaceConfig = {
     /**
      * When enabled, the kick participant button will not be presented for users without a JWT
      */
-    // HIDE_KICK_BUTTON_FOR_GUESTS: false,
+    HIDE_KICK_BUTTON_FOR_GUESTS: true,
 
     /**
      * How many columns the tile view can expand to. The respected range is

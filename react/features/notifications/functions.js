@@ -12,10 +12,7 @@ declare var interfaceConfig: Object;
  * @returns {boolean}
  */
 export function areThereNotifications(stateful: Object | Function) {
-    const state = toState(stateful);
-    const { enabled, notifications } = state['features/notifications'];
-
-    return enabled && notifications.length > 0;
+    return false;
 }
 
 /**

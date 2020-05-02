@@ -16,19 +16,6 @@ import { getOverlayToRender } from '../overlay';
  * @returns {void}
  */
 export function maybeShowSuboptimalExperienceNotification(dispatch, t) {
-    if (isSuboptimalBrowser()) {
-        dispatch(
-            showWarningNotification(
-                {
-                    titleKey: 'notify.suboptimalExperienceTitle',
-                    description: translateToHTML(
-                        t,
-                        'notify.suboptimalBrowserWarning'
-                    )
-                }
-            )
-        );
-    }
 }
 
 /**

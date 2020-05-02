@@ -2,6 +2,7 @@
     background: none;
     max-height: 290px;
     overflow: auto;
+    visibility: hidden;
 
     &-entry {
         cursor: pointer;
